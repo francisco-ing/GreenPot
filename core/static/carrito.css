@@ -1,0 +1,45 @@
+#carrito{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    min-height: 48vh;
+}
+
+#comprar{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+#comprar > a{
+    line-height: 50px;
+    background-color: black;
+    color: white;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+}
+
+table{
+    width: 90%;
+}
+
+thead{
+    background-color: rgb(50, 49, 49);
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+
+th{
+    padding: 5px;
+}
+
+td{
+    text-align: center;
+}
+
+td > img{
+    height: 100px;
+}

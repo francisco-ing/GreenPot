@@ -1,0 +1,23 @@
+{% extends 'core/base.html'%}
+{% load static%}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'micuenta.css' %}">
+    <div class="miCuenta">
+        <h1>Seguimiento de compras</h1>
+        {% if user.is_authenticated %}
+            {% for venta in ventas %}
+                {% if venta.envio.tipo_envio.id_tp_envio != '4' %}
+                    <div class="user-info">
+                        <p>Fecha: {{ venta.fecha }}</p>
+                        <p>Total: ${{ venta.total }}</p>
+                        <p>Direccion de despacho: {{ venta.envio.direccion }}</p>
+                        <p>Estado: {{ venta.envio.tipo_envio }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <h1>no estas logeado, que haces aca?</h1>
+        {% endif %}
+    </div>
+{% endblock %}

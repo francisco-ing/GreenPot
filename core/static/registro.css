@@ -1,0 +1,16 @@
+.formulario{
+    min-height: 80.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------------------------------*/
+form {
+    min-width: 500px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #A0D8B3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

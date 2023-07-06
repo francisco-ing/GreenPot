@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static%}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'micuenta.css' %}">      
+{% endblock %}
+{% block content %}
+  <div class="miCuenta">
+    <h1>Mi cuenta</h1>
+    {% if user.is_authenticated %}
+      <div class="user-info">
+        <p><strong>Nombre:</strong> {{user.first_name }} {{user.last_name}} </p>
+        <p><strong>Nombre de usuario:</strong> {{user.username }}</p>
+        <p><strong>Correo electrónico:</strong> {{user.email}} </p>
+      </div>   
+      <h1>Detalle venta:</h1>
+      <div class="user-info">
+        {% for detalles in detalle %}
+            <div class="user-info">
+              <p>Producto: {{ detalles.producto }}</p>
+              <p>Cantidad: {{ detalles.cantidad }}</p>
+              <p>Precio Unitario:{{ detalles.precio }}</p>
+            </div>  
+        {% endfor %}
+        <div style="margin-top: 10px;"><a href="{% url 'micuenta' %}" >Volver</a></div>
+      </div>  
+    {% else %}
+      <h1>no estas logeado, que haces aca?</h1>
+    {% endif %}
+  </div>
+{% endblock %}

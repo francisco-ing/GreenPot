@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load static%}
+{% block content %}
+    <div class="colaboradores">
+        <div id="imgcolab">
+            <img src="{% static 'img/colaboradores.avif' %}" alt="">
+        </div>
+        <div class="colab">
+            <div id="titulocolab">
+                <h1>Colaboradores</h1>
+            </div>
+            <p>Nuestros colaboradores son un pilar fundamental en la construccion de este proyecto, sin ellos, todo lo que hemos
+                logrado seria practicamente imposible, por eso, les estamos profundamente agradecidos, y por muestra de ello les queremos
+                agradecer otorgandoles ciertos beneficios, que aunque no es suficiente para todo el apoyo que nos dan, esperamos poder
+            </p>
+        </div>
+    </div>
+    <div class="beneficios">
+        <div class="benef">
+            <h1>Beneficios</h1>
+            <div id="textobenef">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam magni a. Eligendi qui deserunt quidem, repellat facere excepturi porro veniam officiis deleniti cupiditate, accusamus, natus consectetur? Voluptatum, incidunt eligendi.</p>
+            </div>
+        </div>
+        <div id="imgbenef">
+            <img src="{% static 'img/colaboradores.avif' %}" alt="">
+        </div>
+    </div>
+{% endblock %}

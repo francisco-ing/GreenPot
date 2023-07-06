@@ -1,0 +1,132 @@
+.principal{
+    min-height: 65vh;
+}
+/*-------------------------------------------*/
+.carousel{
+    padding: 30px 60px;
+    background-color: #A2A378 ;
+    width: 1100px;
+}
+.carrusel{
+    display: flex;
+    justify-content: center;
+}
+.carousel-control-prev{
+    margin-left: 30px;
+}
+.carousel-control-next {
+    margin-right: 30px;
+}
+/*-------------------------------------------*/
+.informacion{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:  #A2A378;
+    height: 300px;
+}
+#info{
+    width: 300px;
+}
+#textoinfo{
+    height: 100px;
+    padding: 5px 10px;
+    color: black;
+    text-align: justify;
+}
+#tituloinfo{
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px;
+}
+#logoinfo{
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+}
+/*-------------------------------------------*/
+.footersup{
+    background-color:#4d452f;
+    padding: 40px 0px;
+}
+.p{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.footersup2{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footersup2 > img{
+    height: 200px;
+    width: 200px;
+}
+#footermidsup{
+    display: flex;
+    flex-direction: column;
+}
+#footermidsup > a{
+    color: rgb(154, 154, 154);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*-------------------------------------------*/ /*Responsive*/ /*-------------------------------------------*/
+@media (max-width: 800px) {
+    .informacion{
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #info{
+        width: 150px;
+    }
+    #textoinfo{
+        height: 50px;
+    }
+    #textoinfo > p{
+        font-size: 0.7rem;
+    }
+    #tituloinfo > h2{
+        font-size: 1rem;
+    }
+    #logoinfo > img{
+        height: 50px;
+    }
+    /*--------------------------*/
+    .carousel-control-prev{
+        margin-left: 60px;
+    }
+    .carousel-control-next {
+        margin-right: 60px;
+    }
+    /*--------------------------*/
+    .footersup > img{
+        height: 50px;
+        width: 50px;
+    }
+    #izquierda > h1{
+        font-size: 1rem;
+    }
+    #izquierda > h2{
+        font-size: 0.6rem;
+    }
+    #footermidsup > a{
+        font-size: 0.5rem;
+    }
+    /*--------------------------*/
+    .principal{
+        min-height: 75vh;
+    }
+}
+@media (max-width: 600px) {
+    .informacion{
+        height: 100px;
+    }
+    #info{
+        height: 200px;
+    }
+}

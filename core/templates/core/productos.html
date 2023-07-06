@@ -1,0 +1,28 @@
+{% extends 'core/baseA.html' %}
+{% load static%}
+{% block content %}
+    <section class="productos">
+
+        {% for i in plantas %}
+            <div class="producto">
+                <img src="{{i.imagen}}" width="250px" height="250px">
+                <div id="info">
+                    {% if i.codigo == "0001" %}
+                        <a href="{% url 'herramientas' %}">Herramientas</a>
+                    {% elif i.codigo == "0002" %}
+                        <a href="{% url 'flores' %}">Plantas</a>
+                    {% elif i.codigo == "0003" %}
+                        <a href="{% url 'maceteros' %}">Maceteros</a>
+                    {% elif i.codigo == "0004" %}
+                        <a href="{% url 'arbustos' %}">Arbustos</a>
+                    {% elif i.codigo == "0005" %}
+                        <a href="{% url 'tierra' %}">Tierra de hojas</a>
+                    {% else%}
+                        <a href="{% url 'ofertas' %}">Ofertas</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+    </section>
+{% endblock %}

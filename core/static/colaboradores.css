@@ -1,0 +1,69 @@
+.colaboradores{
+    background-color: #A2A378;
+    display: flex;
+    justify-content: center;
+}
+#imgcolab > img{
+    width: 500px;
+    padding: 50px 50px;
+}
+.colab{
+    padding: 50px 0px;
+    height: 100%;
+}
+.colab > p{
+    color: white;
+    text-align: justify;
+}
+#titulocolab{
+    color: white;
+}
+/*-------------------------------------------*/
+.beneficios{
+    background-color: #A2A378;
+    display: flex;
+    justify-content: center;
+}
+#imgbenef > img{
+    width: 500px;
+    padding: 50px 50px;
+}
+.benef > h1{
+    color: white;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+#textobenef  > p{
+    color: white;
+    padding: 0px 50px;
+    text-align: justify;
+}
+/*-------------------------------------------*/ /*Responsive*/ /*-------------------------------------------*/
+@media (max-width: 800px) {
+    .colaboradores{
+        flex-direction: column;
+        align-items: center;
+    }
+    #imgcolab > img{
+        width: 290px;
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+    .colab{
+        padding: 60px;
+    }
+    /*--------------------------*/
+    .beneficios{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #imgbenef > img{
+        width: 250px;
+        padding: 0px;
+    }
+    #textobenef  > p{
+        color: white;
+        padding: 0px 50px;
+        text-align: justify;
+    }
+}

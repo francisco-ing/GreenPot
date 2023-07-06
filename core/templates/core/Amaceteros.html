@@ -1,0 +1,49 @@
+{% extends 'core/baseA.html' %}
+{% load static%}
+{% block head %}
+    <div id="btnvolver">
+        <a title="" href="{% url 'productos' %}">
+            <
+        </a>
+    </div>
+{% endblock %}
+{% block head2 %}
+    <div id="busqueda">
+        <img src="{% static 'img/icons8_search_50px.png' %}" alt="">
+        <input type="text" placeholder="Ajustar búsqueda">
+    </div>
+{% endblock %}
+{% block content %}
+    <section class="productos">
+        {% for i in productos %}
+            {% if i.tipo == 3 %}
+                <div class="producto">
+                    <img src="{{ i.imagen }}" width="250px" height="250px">
+                    <div id="info">
+                        <div class="nombre">
+                            <h1>{{ i.detalle }}</h1>
+                        </div>
+                        <div class="precio">
+                            {% if i.oferta == True %}
+                                <b><del>{{i.tachado}}</del>
+                                <br>${{i.precio}}</b>
+                                <img src="{% static 'img/carrito.png' %}" alt="" width="30px">
+                            {% else %}
+                                <b>${{i.precio}}</b>
+                                <img src="{% static 'img/carrito.png' %}" alt="" width="30px">
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if i.stock == 0%}
+                        <a href="">no hay stock</a>
+                    {% else %}
+                        <a href="">Stock: {{ i.stock }}</a>
+                        <div id="textoAgregar">
+                            <a href="{% url 'addtocar' i.codigo%}">Agregar</a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </section>
+{% endblock %}

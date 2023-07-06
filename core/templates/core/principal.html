@@ -1,0 +1,67 @@
+{% extends 'core/base.html' %}
+{% load static%}
+{% block content %}
+<div class="principal">
+  <section id="carousel">
+    <div class="carrusel">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="{% static 'img/carrusel1.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{% static 'img/carrusel2.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{% static 'img/carrusel3.webp' %}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<div class="informacion">
+    <div id="info">
+        <div id="logoinfo">
+          <img src="{% static 'img/jardineria.png' %}" alt="">
+        </div>
+        <div id="tituloinfo">
+          <h2>Jardineria</h2>
+        </div>
+        <div id="textoinfo">
+          <p>Nos especializamos en productos de jardinería como maceteros, tierra de hojas, flores y arbustos. Con los mejores precios!.</p>
+        </div>  
+    </div>
+    <div id="info">
+        <div id="logoinfo">
+          <img src="{% static 'img/persona.png' %}" alt="">
+        </div>
+        <div id="tituloinfo">
+          <h2>Fundacion</h2>
+        </div>
+        <div id="textoinfo">
+          <p>Fundacion sin fines de lucro dedicada a ayudar a las personas a conseguir productos de jardineria de calidad.</p>
+        </div> 
+    </div>
+    <div id="info">
+        <div id="logoinfo">
+          <img src="{% static 'img/personas.png' %}" alt="">
+        </div>
+        <div id="tituloinfo">
+          <h2>Colaboradores</h2>
+        </div> 
+        <div id="textoinfo">
+          <p>Con tu ayuda voluntaria, podemos seguir creciendo como fundacion para asi, seguir aportando a la comunidad.</p>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

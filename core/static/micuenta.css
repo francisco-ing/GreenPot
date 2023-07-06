@@ -1,0 +1,157 @@
+#crud{
+    display: flex;
+    flex-direction: column;
+}
+
+.miCuenta {
+    min-height: 48.5vh;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #e5f9dbd2;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+h1 {
+    text-align: center;
+}
+.user-info {
+    border: 1px solid #83764F;
+    padding: 20px;
+    margin-top: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.user-info p {
+    margin: 0;
+}
+.user-info strong {
+    margin-right: 10px;
+}
+.user-info a{
+    left: 60px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #83764F;
+    border-radius: 15px;
+    padding: 2px 2px;
+}
+.cancelarSuscripcion{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+.user-info a:hover{
+    color: #463f2a;
+}
+button{
+    width: 100px;
+    height: 30px;
+    background: dodgerblue;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+}
+button:hover{
+    background-color: rgb(40, 98, 25);
+}
+.cancelar-info{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+.compras{
+    border: 1px solid #83764F;
+    padding: 20px;
+    margin-top: 20px;
+    display: block;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.compras > p{
+    height: 0.1px;
+    background-color: black;
+}
+#info{
+    display: block;
+    justify-content: center;
+    padding-left: 8px;
+    padding-top: 8px;
+    height: 180px;
+}
+#img{
+    position: relative;
+    bottom: 150px;
+    left: 200px;
+}
+/*-------------------------------------------*/
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+     display: block;
+     margin-bottom: 5px;
+     font-weight: bold;
+}
+input[type="text"] {
+     width: 100%;
+     height: 40px;
+     padding: 10px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+     font-size: 16px;
+}
+button[type="submit"] {
+     display: block;
+     width: 100%;
+     height: 40px;
+     padding: 10px;
+     background-color: #008CBA;
+    color: #fff;
+     border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #0077A3;
+}
+#tarjetaCredito{
+       position: relative;
+       bottom: 100px;
+       height: 400px;
+    }
+/*-------------------------------------------*/ /*Responsive*/ /*-------------------------------------------*/
+@media (max-width: 800px) {
+    .miCuenta {
+        max-width: 80%;
+        transition: 0.8s;
+    }
+}
+@media (max-width: 620px) {
+    #img > img{
+        width: 40%;
+        height: 40%;
+        transition: 0.8s;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 550px) {
+    #img > img{
+        width: 30%;
+        height: 30%;
+        transition: 0.8s;
+        padding-right: 20px;
+    }
+}
+
+

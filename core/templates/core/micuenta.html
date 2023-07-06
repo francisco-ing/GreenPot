@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static%}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'micuenta.css' %}">      
+{% endblock %}
+{% block content %}
+  <div class="miCuenta">
+    <h1>Mi cuenta</h1>
+    {% if user.is_authenticated %}
+      <div class="user-info">
+        <p><strong>Nombre:</strong> {{user.first_name }} {{user.last_name}} </p>
+        <p><strong>Nombre de usuario:</strong> {{user.username }}</p>
+        <p><strong>Correo electrónico:</strong> {{user.email}} </p>
+      </div>   
+      <h1>Compras recientes</h1>
+      <div class="user-info">
+        {% for venta in ventas %}
+          {% if venta.envio.tipo_envio.id_tp_envio == '4' %}
+            <div class="user-info">
+              <p>Fecha: {{ venta.fecha }}</p>
+              <p>Total: ${{ venta.total }}</p>
+              <p>Direccion de despacho: {{ venta.envio.direccion }}</p>
+              <p>Estado: {{ venta.envio.tipo_envio }}</p>
+              <a style="border: 0px; font-size: 1.1rem; " href="{% url 'detalleVentas' venta.id %}">Detalles</a>
+            </div>  
+          {% endif %}
+        {% endfor %}
+      </div>  
+    {% else %}
+      <h1>no estas logeado, que haces aca?</h1>
+    {% endif %}
+  </div>
+{% endblock %}

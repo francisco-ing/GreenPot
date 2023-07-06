@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+{% load static%}
+{% block content %}
+    <div class="fundacion">
+        <div id="imgfundacion">
+            <img src="{% static 'img/colaboradores.avif' %}" alt="">
+        </div>
+        <div class="subfundacion">
+            <div id="titulo">
+                <h1>Fundacion</h1>
+            </div>
+            <p>Somos vecinos de una comunidad, los cuales realizamos ventas de productos para jardineria con el fin de
+                ayudar
+                a una fundacion sin fines de lucro.
+            </p>
+            <p>Gracias a nuestros colaboradores que realizan aportes a la fundacion y a los alumos de DuocUC Sede
+                Melipilla, por
+                permitirnos avanzar cada dia con el proyecto y seguir creciendo como comunidad.
+            </p>
+        {% if user.is_authenticated %}
+            {% if suscrito %}
+                <h3>Gracias por estar suscrito a la fundacion, agradecemos mucho tu apoyo! Disfruta de los beneficios!</h3>
+            {% else %}
+                <h4>No estas suscrito :(</h4>
+                <h5>¿Deseas suscribirte y disfrutar de los beneficios y ayudar a la fundacion?</h5>
+                <form class="d" id="d" action="{% url 'suscribir' %}" method="post" style="background-color: #A2A378; box-shadow: none;">
+                {% csrf_token %}
+                <button class="btn btn-primary" >Suscribete</button>
+                </form>
+            {% endif %}
+        {% else %}
+        <h5>Debes tener una cuenta registrada para poder suscribirte a Green Pot :(</h5>
+        {% endif %}
+        </div>
+        
+    </div>
+{% endblock %}
