@@ -5,3 +5,5 @@ Creadores: Francisco Soto Lopez y Nicolas Hinojosa Salazar
 Para el correcto funcionamiento del proyecto es necesario instalar algunos programas los cuales son:
 -- pip install django
 -- pip install requests
+-- pip install django-crispy-forms
+-- pip install django-bootstrap4
